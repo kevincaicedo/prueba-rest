@@ -35,10 +35,11 @@ class MainActivity : AppCompatActivity() {
         val activityMainBinding : ActivityMainBinding =
             DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        activityMainBinding.viewmodel = restViewModel
         restViewModel.getWeatherLive().observe(this, Observer {
             activityMainBinding.model = it
-            println("Imprimio")
+            println("Weather: ${it.name}")
         })
-        // activityMainBinding.model = restViewModel
+
     }
 }

@@ -7,6 +7,10 @@
         <variable
             name="model"
             type="com.example.pruebarest.model.Weather" />
+
+        <variable
+            name="viewmodel"
+            type="com.example.pruebarest.viewmodel.RestViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -54,6 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Leer Rest"
+            android:onClick="@{ () -> viewmodel.callWeatherApi() }"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             android:layout_marginBottom="55dp"
             app:layout_constraintEnd_toEndOf="parent"

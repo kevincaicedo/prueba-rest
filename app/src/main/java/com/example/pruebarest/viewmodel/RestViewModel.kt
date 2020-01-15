@@ -16,7 +16,4 @@ class RestViewModel @Inject constructor(val repository: WeatherRepository): View
         repository.callWeatherServiceApi()
     }
 
-    fun getWeatherData() : Weather? {
-        return getWeatherLive().value
-    }
 }
